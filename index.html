@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhoSmoke</title>
+
+<style>
+
+/* Reset spacing */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body Background */
+body{
+    font-family: Arial, sans-serif;
+    color:white;
+    text-align:center;
+    background:url('bg.jpg') center/cover fixed;
+    animation: smokeMove 20s ease-in-out infinite;
+    width:100vw;
+    overflow-x:hidden;
+}
+
+/* Slow vibration background */
+@keyframes smokeMove{
+    0%{background-position:center;}
+    25%{background-position:2px 1px;}
+    50%{background-position:-2px -1px;}
+    75%{background-position:1px -2px;}
+    100%{background-position:center;}
+}
+
+/* Sections */
+.section{
+    width:100%;
+    padding:70px 20px;
+    text-align:center;
+}
+
+/* Logo */
+.logo{
+    font-size:60px;
+    letter-spacing:5px;
+    color:#f5f5f5;
+    text-shadow:0 0 8px #777, 0 0 20px #444;
+}
+
+/* Artist Image */
+.artist-img{
+    width:180px;
+    border-radius:50%;
+    border:3px solid #555;
+}
+
+/* Music Card */
+.music-card{
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    width:300px;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #555;
+    margin:40px auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* Buttons */
+button{
+    background:#222;
+    border:none;
+    padding:15px 30px;
+    color:white;
+    font-size:16px;
+    border-radius:10px;
+    cursor:pointer;
+    width:220px;
+}
+
+button:hover{
+    background:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Artist Info -->
+<div class="section">
+    <img src="artist.jpg" class="artist-img">
+    <h1 class="logo">Smoke</h1>
+    <p>Dark. Aggressive. Real.</p>
+</div>
+
+<!-- Latest Release -->
+<div class="section">
+
+    <h2> Latest Release</h2>
+
+    <div class="music-card">
+        <h3>G4NG</h3>
+        <p>PrinceSmoke — Out Now</p>
+
+        <button onclick="window.open('https://open.spotify.com/artist/320c22WmfDgSdfDGIwAvZl?si=7xYfWY8vRDWRFbap1KJzCQ','_blank')">
+             Spotify
+        </button>
+
+        <br><br>
+
+        <button onclick="window.open('https://music.apple.com/za/artist/princesmoke/1841046543?ls','_blank')">
+             Apple Music
+        </button>
+
+        <br><br>
+
+        <button onclick="window.open('https://on.soundcloud.com/ahNWvjcXMa0Lx1P0HK','_blank')">
+             SoundCloud
+        </button>
+
+    </div>
+</div>
+
+<!-- Follow PrinceSmoke -->
+<div class="section" style="background:rgba(0,0,0,0.6); border-top:1px solid #555; border-bottom:1px solid #555;">
+
+    <h2> Follow PrinceSmoke</h2>
+    <p>Stay connected with the music.</p>
+
+    <button onclick="window.open('https://instagram.com/Who_is_smokey','_blank')">
+        Follow On Instagram
+    </button>
+
+</div>
+
+<!-- About Artist -->
+<div class="section">
+    <h2> About</h2>
+    <p>
+    Inspired by the flame of Travis Scott, the genius of Kanye West,
+    and the raw energy of Eminem.<br><br>
+
+    Music is more than medicine in this time of life.
+    PrinceSmoke delivers sound that speaks to the streets.
+    </p>
+</div>
+
+<!-- Footer -->
+<div class="section">
+    <p>© 2026 WhoSmoke. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
