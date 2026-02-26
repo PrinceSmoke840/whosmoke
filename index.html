@@ -7,7 +7,7 @@
 
 <style>
 
-/* Reset spacing */
+/* Reset */
 *{
     margin:0;
     padding:0;
@@ -25,7 +25,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Slow vibration background */
+/* Smoke vibration animation */
 @keyframes smokeMove{
     0%{background-position:center;}
     25%{background-position:2px 1px;}
@@ -38,7 +38,6 @@ body{
 .section{
     width:100%;
     padding:70px 20px;
-    text-align:center;
 }
 
 /* Logo */
@@ -56,23 +55,37 @@ body{
     border:3px solid #555;
 }
 
-/* Music Card */
-.music-card{
-    background:rgba(0,0,0,0.7);
-    backdrop-filter: blur(8px);
-    width:300px;
-    padding:25px;
-    border-radius:20px;
-    border:1px solid #555;
-    margin:40px auto;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+/* Platform Grid */
+.platform-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap:20px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-/* Buttons */
-button{
+/* Platform Cards */
+.platform-card{
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #555;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.platform-card:hover{
+    background:#333;
+    transform:scale(1.07);
+}
+
+/* Follow Button */
+.follow-btn{
     background:#222;
     border:none;
     padding:15px 30px;
@@ -80,11 +93,15 @@ button{
     font-size:16px;
     border-radius:10px;
     cursor:pointer;
-    width:220px;
 }
 
-button:hover{
+.follow-btn:hover{
     background:#444;
+}
+
+/* Footer */
+.footer{
+    padding:40px;
 }
 
 </style>
@@ -103,43 +120,56 @@ button:hover{
 <div class="section">
 
     <h2> Latest Release</h2>
+    <h3>G4NG</h3>
+    <p>PrinceSmoke — Out Now</p>
 
-    <div class="music-card">
-        <h3>G4NG</h3>
-        <p>PrinceSmoke — Out Now</p>
+    <div class="platform-grid">
 
-        <button onclick="window.open('https://open.spotify.com/artist/320c22WmfDgSdfDGIwAvZl?si=7xYfWY8vRDWRFbap1KJzCQ','_blank')">
+        <a href="YOUR_SPOTIFY_LINK" target="_blank" class="platform-card">
              Spotify
-        </button>
+        </a>
 
-        <br><br>
-
-        <button onclick="window.open('https://music.apple.com/za/artist/princesmoke/1841046543?ls','_blank')">
+        <a href="YOUR_APPLE_LINK" target="_blank" class="platform-card">
              Apple Music
-        </button>
+        </a>
 
-        <br><br>
-
-        <button onclick="window.open('https://on.soundcloud.com/ahNWvjcXMa0Lx1P0HK','_blank')">
+        <a href="YOUR_SOUNDCLOUD_LINK" target="_blank" class="platform-card">
              SoundCloud
-        </button>
+        </a>
+
+        <a href="https://share.google/OmkFJ1IjryTwuVKr2" target="_blank" class="platform-card">
+             YouTube
+        </a>
+
+        <a href="https://share.google/KqGzs76G73Rzh4JF6" target="_blank" class="platform-card">
+             Boomplay
+        </a>
+
+        <a href="https://share.google/Y1ziYAhLAeNcINpRu" target="_blank" class="platform-card">
+             Qobuz
+        </a>
+
+        <a href="https://amazon.com/music/player/albums/B0FS247LQY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Yl0hxBPJ8Iws2jZw0Oy4JpX0F" target="_blank" class="platform-card">
+             Amazon Music
+        </a>
 
     </div>
+
 </div>
 
-<!-- Follow PrinceSmoke -->
+<!-- Follow Section -->
 <div class="section" style="background:rgba(0,0,0,0.6); border-top:1px solid #555; border-bottom:1px solid #555;">
 
     <h2> Follow PrinceSmoke</h2>
     <p>Stay connected with the music.</p>
 
-    <button onclick="window.open(https://www.instagram.com/who_is_smokey?igsh=MTA1NDg0azNseHZ4Zg==','_blank')">
-        Follow On Instagram
-    </button>
+    <a href="https://instagram.com/Who_is_smokey" target="_blank">
+        <button class="follow-btn"> Follow On Instagram</button>
+    </a>
 
 </div>
 
-<!-- About Artist -->
+<!-- About Section -->
 <div class="section">
     <h2> About</h2>
     <p>
@@ -152,7 +182,7 @@ button:hover{
 </div>
 
 <!-- Footer -->
-<div class="section">
+<div class="footer">
     <p>© 2026 WhoSmoke. All Rights Reserved.</p>
 </div>
 
